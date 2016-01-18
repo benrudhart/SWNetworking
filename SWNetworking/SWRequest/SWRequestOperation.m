@@ -183,7 +183,7 @@
 //-(void)setDownloadProgressBlock:(void (^)(long  bytes,  long totalBytes,  long totalBytesExpected)) downloadProgressBlock;
 
 - (void)showNetworkActivityIndicator:(BOOL)show {
-#ifndef TARGET_OS_TV
+#if !TARGET_OS_TV
 	if ( ![[UIApplication class] respondsToSelector:@selector(sharedApplication) ] ) {
 		return;
 	}
