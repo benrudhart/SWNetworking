@@ -42,9 +42,10 @@ typedef NS_ENUM(NSInteger, SWNetworkingReachabilityStatus) {
 @interface SWReachability : NSObject
 
 /**
- *  Reachamitly status, three states available.SWNetworkReachabilityStatusNotReachable,SWNetworkReachabilityStatusReachableViaWWAN,SWNetworkReachabilityStatusReachableViaWiFi are the status
+ *  Returns the current reachability status.
+ @see SWNetworkingReachabilityStatus
  */
-@property (readonly, nonatomic, assign) SWNetworkingReachabilityStatus networkReachabilityStatus;
+@property (readonly, nonatomic) SWNetworkingReachabilityStatus networkReachabilityStatus;
 
 /**
  *  Calling this current status will return - Class methods
@@ -76,12 +77,6 @@ typedef NS_ENUM(NSInteger, SWNetworkingReachabilityStatus) {
  */
 -(BOOL)connected;
 
-/**
- *  Calling this current status will return - Instance methods
- *
- *  @return Currnt Status
- */
--(SWNetworkingReachabilityStatus)getCurrentNetworkStatus;
 
 /**
  *  calling this method will start notification will start .
